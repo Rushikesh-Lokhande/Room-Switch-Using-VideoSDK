@@ -1,0 +1,29 @@
+:root { color-scheme: light dark; --bg:#0b1220; --fg:#e5e7eb; --muted:#9ca3af; --accent:#22c55e; --outline:#4b5563; }
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; padding: 0; }
+body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); }
+.app { min-height: 100%; display: flex; flex-direction: column; }
+.header { padding: 16px; border-bottom: 1px solid #1f2937; }
+.footer { padding: 12px 16px; border-top: 1px solid #1f2937; color: var(--muted); font-size: 12px; text-align: center; }
+.status { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #1f2937; background: #0f172a; }
+.status .pill { background: #111827; border: 1px solid #1f2937; padding: 4px 10px; border-radius: 999px; font-size: 12px; }
+.status .text { color: var(--muted); font-size: 14px; }
+.container { padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.controls { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { background: var(--accent); color: #052e16; border: none; padding: 10px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+.btn:hover { filter: brightness(1.05); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.outline { background: transparent; color: var(--fg); border: 1px solid var(--outline); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+.tile { position: relative; background: #0b1220; border: 1px solid #1f2937; border-radius: 10px; overflow: hidden; aspect-ratio: 16/10; display: flex; align-items: center; justify-content: center; }
+.tile video { width: 100%; height: 100%; object-fit: cover; background: #030712; }
+.tile .label { position: absolute; left: 8px; bottom: 8px; background: rgba(0,0,0,.5); padding: 2px 8px; border-radius: 6px; font-size: 12px; }
+.empty { color: var(--muted); text-align: center; padding: 24px; border: 1px dashed #374151; border-radius: 8px; }
+
+@media (max-width: 640px) {
+  .header h1 { font-size: 18px; }
+  .btn { width: 100%; }
+}
+
+
+
